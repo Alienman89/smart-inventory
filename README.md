@@ -24,7 +24,7 @@ System zarządzania magazynem i śledzenia ruchów magazynowych zbudowany w opar
 
 ### Za pomocą Docker Compose (Zalecane)
 
-Upewnij się, że masz zainstalowanego Dockera, a następnie wykonaj polecenie w katalogu głównym:
+Upewnij się, że masz zainstalowanego i uruchomionego w tle Dockera, a następnie wykonaj polecenie w katalogu głównym:
 
 ```bash
 docker compose up --build
