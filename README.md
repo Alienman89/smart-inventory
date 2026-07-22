@@ -2,6 +2,8 @@
 
 System zarządzania magazynem i śledzenia ruchów magazynowych zbudowany w oparciu o **Java 21**, **Spring Boot 3** oraz **PostgreSQL**.
 
+---
+
 ## 🚀 Technologie
 
 * **Java 21**
@@ -12,19 +14,51 @@ System zarządzania magazynem i śledzenia ruchów magazynowych zbudowany w opar
 * **JUnit 5 & Mockito** (testy jednostkowe)
 * **Docker & Docker Compose**
 
+---
+
 ## 💡 Funkcjonalności
 
-- 📦 **Zarządzanie Produktami:** Pełny CRUD, unikalne kody SKU, walidacja stanów i cen.
-- 🏷️ **Kategorie:** Klasyfikacja produktów w relacji jeden-do-wielu (`@ManyToOne`).
-- 🔄 **Ruchy Magazynowe:** Rejestrowanie historii przyjęć (`IN`) i wydań (`OUT`) z automatycznym przeliczaniem ilości towaru.
-- 🛡️ **Globalna Obsługa Błędów:** Czytelne komunikaty błędów w formacie JSON (`@RestControllerAdvice`).
-- 📑 **Interaktywna Dokumentacja:** Swagger UI dostępny pod adresem URL.
+* 📦 **Zarządzanie Produktami:** Pełny CRUD, unikalne kody SKU, walidacja stanów i cen.
+* 🏷️ **Kategorie:** Klasyfikacja produktów w relacji jeden-do-wielu (`@ManyToOne`).
+* 🔄 **Ruchy Magazynowe:** Rejestrowanie historii przyjęć (`IN`) i wydań (`OUT`) z automatycznym przeliczaniem ilości towaru.
+* 🛡️ **Globalna Obsługa Błędów:** Czytelne komunikaty błędów w formacie JSON (`@RestControllerAdvice`).
+* 📑 **Interaktywna Dokumentacja:** Swagger UI dostępny bezpośrednio pod adresem URL.
 
-## 🛠️ Uruchomienie projektu
+---
 
-### Za pomocą Docker Compose (Zalecane)
+## 🛠️ Uruchomienie projektu (Docker)
 
-Upewnij się, że masz zainstalowanego i uruchomionego w tle Dockera, a następnie wykonaj polecenie w katalogu głównym:
+### 1. Start aplikacji
+
+Upewnij się, że masz uruchomiony program **Docker Desktop**, a następnie wykonaj w terminalu polecenie:
 
 ```bash
 docker compose up --build
+```
+
+### 2. Dostęp do API i Dokumentacji
+
+Po pomyślnym uruchomieniu kontenerów aplikacja oraz interaktywna dokumentacja są od razu gotowe do testowania:
+
+* 📑 **Swagger UI (Dokumentacja API):** [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+* 🔗 **Endpoint bazowy API:** [http://localhost:8080/api/products](http://localhost:8080/api/products)
+
+---
+
+### 🛑 Zatrzymanie aplikacji
+
+Aby zatrzymać i wyczyścić kontenery po zakończeniu pracy, wpisz w terminalu:
+
+```bash
+docker compose down
+```
+
+---
+
+## 🧪 Testy jednostkowe
+
+Aby uruchomić pakiet automatycznych testów jednostkowych lokalnie, wykonaj komendę:
+
+```bash
+./mvnw test
+```
