@@ -30,7 +30,7 @@ System zarządzania magazynem i śledzenia ruchów magazynowych zbudowany w opar
 
 ### 1. Start aplikacji
 
-Upewnij się, że masz uruchomiony program **Docker Desktop**, a następnie wykonaj w terminalu polecenie:
+Upewnij się, że masz uruchomiony program **Docker Desktop**, a następnie wykonaj w terminalu w głównym katalogu projektu polecenie:
 
 ```bash
 docker compose up --build
